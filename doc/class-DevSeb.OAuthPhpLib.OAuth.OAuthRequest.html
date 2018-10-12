@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class DevSeb\OAuthPhpLib\OAuth\OAuthRequest</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-DevSeb.html">
+						DevSeb<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-DevSeb.OAuthPhpLib.html">
+						OAuthPhpLib<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DevSeb.OAuthPhpLib.Client.html">
+						Client					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html">
+						OAuth					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DevSeb.OAuthPhpLib.Server.html">
+						Server					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthAccessToken.html">OAuthAccessToken</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthConsumer.html">OAuthConsumer</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthError.html">OAuthError</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRefreshToken.html">OAuthRefreshToken</a></li>
+				<li class="active"><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html">OAuthRequest</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequestToken.html">OAuthRequestToken</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html">OAuthSignature</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureHmacSha1.html">OAuthSignatureHmacSha1</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignaturePlainText.html">OAuthSignaturePlainText</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html">OAuthSignatureRsaSha1</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthToken.html">OAuthToken</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">OAuthException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html" title="Summary of DevSeb\OAuthPhpLib\OAuth"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class OAuthRequest</h1>
+
+
+	<div class="description">
+	<p>OAuthRequest
+OAuth request sent by a client, parse params
+from header or GET/POST parameters.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html"><span>DevSeb\OAuthPhpLib\Client\HttpRequest</span></a>
+			
+			 implements 
+				<a href="class-DevSeb.OAuthPhpLib.Client.Map.html"><span>DevSeb\OAuthPhpLib\Client\Map</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>DevSeb\OAuthPhpLib\OAuth\OAuthRequest</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-DevSeb.html">DevSeb</a>\<a href="namespace-DevSeb.OAuthPhpLib.html">OAuthPhpLib</a>\<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html">OAuth</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html#6-97" title="Go to source code">OAuth/OAuthRequest.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="setOAuthAuthorizationHeader" id="_setOAuthAuthorizationHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setOAuthAuthorizationHeader">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html#14-33" title="Go to source code">setOAuthAuthorizationHeader</a>( <span>array <var>$oauthParams</var></span> )</code>
+
+		<div class="description short">
+			<p>Build OAuth Authorization header from oauth params.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Build OAuth Authorization header from oauth params.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oauthParams</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOAuthParams" id="_getOAuthParams">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOAuthParams">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html#35-42" title="Go to source code">getOAuthParams</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOAuthParamsFromQuery" id="_getOAuthParamsFromQuery">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOAuthParamsFromQuery">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html#44-55" title="Go to source code">getOAuthParamsFromQuery</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOAuthParamsFromHeader" id="_getOAuthParamsFromHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOAuthParamsFromHeader">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html#57-85" title="Go to source code">getOAuthParamsFromHeader</a>( )</code>
+
+		<div class="description short">
+			<p>Extract OAuth params from Authorization header.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Extract OAuth params from Authorization header.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBody" id="_setBody">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBody">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html#87-96" title="Go to source code">setBody</a>( <span>string <var>$body</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$body</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setBody">DevSeb\OAuthPhpLib\Client\HttpRequest::setBody()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#methods">DevSeb\OAuthPhpLib\Client\HttpRequest</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#___construct">__construct()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_clear">clear()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_containsKey">containsKey()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_containsKeys">containsKeys()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_containsValue">containsValue()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_get">get()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getBaseUrl">getBaseUrl()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getBasicAuth">getBasicAuth()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getBasicAuthCredentials">getBasicAuthCredentials()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getBody">getBody()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getCurrentRequest">getCurrentRequest()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getHeader">getHeader()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getHeaders">getHeaders()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getHost">getHost()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getHttpQuery">getHttpQuery()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getKeys">getKeys()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getMethod">getMethod()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getParams">getParams()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getPath">getPath()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getPort">getPort()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getRoute">getRoute()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getScheme">getScheme()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getStatus">getStatus()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getUri">getUri()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getUrl">getUrl()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_getValues">getValues()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_hasHeader">hasHeader()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_isEmpty">isEmpty()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_isGet">isGet()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_isOk">isOk()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_isPost">isPost()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_isSSL">isSSL()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_remove">remove()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_set">set()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setEscapeQuotes">setEscapeQuotes()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setHeader">setHeader()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setHeaders">setHeaders()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setHost">setHost()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setMethod">setMethod()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setParams">setParams()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setPort">setPort()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setScheme">setScheme()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setStatus">setStatus()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setUri">setUri()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_setUrl">setUrl()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#_size">size()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#constants">DevSeb\OAuthPhpLib\Client\HttpRequest</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#METHOD_DELETE"><b>METHOD_DELETE</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#METHOD_GET"><b>METHOD_GET</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#METHOD_POST"><b>METHOD_POST</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#STATUS_ERROR"><b>STATUS_ERROR</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#STATUS_OK"><b>STATUS_OK</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#STATUS_TIMEOUT"><b>STATUS_TIMEOUT</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#properties">DevSeb\OAuthPhpLib\Client\HttpRequest</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$body"><var>$body</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$headers"><var>$headers</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$host"><var>$host</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$method"><var>$method</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$params"><var>$params</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$path"><var>$path</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$port"><var>$port</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$scheme"><var>$scheme</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$status"><var>$status</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$uri"><var>$uri</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html#$url"><var>$url</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

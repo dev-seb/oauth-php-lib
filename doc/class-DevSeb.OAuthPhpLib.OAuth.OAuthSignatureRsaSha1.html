@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class DevSeb\OAuthPhpLib\OAuth\OAuthSignatureRsaSha1</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-DevSeb.html">
+						DevSeb<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-DevSeb.OAuthPhpLib.html">
+						OAuthPhpLib<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DevSeb.OAuthPhpLib.Client.html">
+						Client					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html">
+						OAuth					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DevSeb.OAuthPhpLib.Server.html">
+						Server					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthAccessToken.html">OAuthAccessToken</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthConsumer.html">OAuthConsumer</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthError.html">OAuthError</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRefreshToken.html">OAuthRefreshToken</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html">OAuthRequest</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequestToken.html">OAuthRequestToken</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html">OAuthSignature</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureHmacSha1.html">OAuthSignatureHmacSha1</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignaturePlainText.html">OAuthSignaturePlainText</a></li>
+				<li class="active"><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html">OAuthSignatureRsaSha1</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthToken.html">OAuthToken</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">OAuthException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html" title="Summary of DevSeb\OAuthPhpLib\OAuth"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class OAuthSignatureRsaSha1</h1>
+
+
+	<div class="description">
+	<p>Class OAuthSignatureRsaSha1.</p>
+
+<p>To generate key pairs with openssl:
+$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+$ openssl rsa -pubout -in private.pem -out public.pem</p>
+
+<p>To convert existing RSA .pub public key from .pem X.509 public key:
+$ openssl req -x509 -key /path/to/id_rsa -nodes -days 365 -newkey rsa:2048 -out id_rsa.pem</p>
+
+<p>The client has to provide the public key to server in order to verify signature</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html"><span>DevSeb\OAuthPhpLib\OAuth\OAuthSignature</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>DevSeb\OAuthPhpLib\OAuth\OAuthSignatureRsaSha1</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-DevSeb.html">DevSeb</a>\<a href="namespace-DevSeb.OAuthPhpLib.html">OAuthPhpLib</a>\<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html">OAuth</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#6-163" title="Go to source code">OAuth/OAuthSignatureRsaSha1.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#30-42" title="Go to source code">__construct</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthConsumer.html">DevSeb\OAuthPhpLib\OAuth\OAuthConsumer</a></code> <var>$Consumer</var></span>, <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthToken</a></code> <var>$Token</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>OAuthSignatureRsaSha1 constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>OAuthSignatureRsaSha1 constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Consumer</var></dt>
+					<dd></dd>
+					<dt><var>$Token</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#___construct">DevSeb\OAuthPhpLib\OAuth\OAuthSignature::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#44-55" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			<p>Free resources</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Free resources</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSignature" id="_getSignature">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSignature">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#60-78" title="Go to source code">getSignature</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequest.html">DevSeb\OAuthPhpLib\OAuth\OAuthRequest</a></code> <var>$Request</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Request</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkRequest" id="_checkRequest">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkRequest">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#83-113" title="Go to source code">checkRequest</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html">DevSeb\OAuthPhpLib\Client\HttpRequest</a></code> <var>$Request</var></span> )</code>
+
+		<div class="description short">
+			<p>Check request signature.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check request signature.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Request</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_checkRequest">DevSeb\OAuthPhpLib\OAuth\OAuthSignature::checkRequest()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRsaPublicKey" id="_setRsaPublicKey">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRsaPublicKey">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#118-131" title="Go to source code">setRsaPublicKey</a>( <span> <var>$rsaPublicKeyFile</var></span> )</code>
+
+		<div class="description short">
+			<p>Public key used by server to verify request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Public key used by server to verify request.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rsaPublicKeyFile</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRsaPrivateKey" id="_setRsaPrivateKey">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRsaPrivateKey">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#133-146" title="Go to source code">setRsaPrivateKey</a>( <span> <var>$rsaPrivateKeyFile</var></span> )</code>
+
+		<div class="description short">
+			<p>Private key used by client to sign request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Private key used by client to sign request.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rsaPrivateKeyFile</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRsaPublicKey" id="_getRsaPublicKey">
+
+		<td class="attributes"><code>
+			 public 
+
+			resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRsaPublicKey">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#148-154" title="Go to source code">getRsaPublicKey</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					resource
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRsaPrivateKey" id="_getRsaPrivateKey">
+
+		<td class="attributes"><code>
+			 public 
+
+			resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRsaPrivateKey">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.OAuth.OAuthSignatureRsaSha1.html#156-162" title="Go to source code">getRsaPrivateKey</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					resource
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#methods">DevSeb\OAuthPhpLib\OAuth\OAuthSignature</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getBaseSignature">getBaseSignature()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getEncryptKey">getEncryptKey()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getNormalizedMethod">getNormalizedMethod()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getNormalizedParams">getNormalizedParams()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getNormalizedUrl">getNormalizedUrl()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getOAuthSignature">getOAuthSignature()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_getSignatureMethod">getSignatureMethod()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_setSignatureMethod">setSignatureMethod()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_signRequest">signRequest()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#_urlEncode">urlEncode()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#constants">DevSeb\OAuthPhpLib\OAuth\OAuthSignature</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#SIGNATURE_METHOD_HMAC_SHA1"><b>SIGNATURE_METHOD_HMAC_SHA1</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#SIGNATURE_METHOD_PLAINTEXT"><b>SIGNATURE_METHOD_PLAINTEXT</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#SIGNATURE_METHOD_RSA_SHA1"><b>SIGNATURE_METHOD_RSA_SHA1</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#properties">DevSeb\OAuthPhpLib\OAuth\OAuthSignature</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#$Consumer"><var>$Consumer</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#$Token"><var>$Token</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html#$signatureMethod"><var>$signatureMethod</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

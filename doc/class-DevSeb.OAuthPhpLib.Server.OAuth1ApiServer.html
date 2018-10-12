@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class DevSeb\OAuthPhpLib\Server\OAuth1ApiServer</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-DevSeb.html">
+						DevSeb<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-DevSeb.OAuthPhpLib.html">
+						OAuthPhpLib<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DevSeb.OAuthPhpLib.Client.html">
+						Client					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DevSeb.OAuthPhpLib.OAuth.html">
+						OAuth					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-DevSeb.OAuthPhpLib.Server.html">
+						Server					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.HttpResponse.html">HttpResponse</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.HttpRoute.html">HttpRoute</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html">HttpServer</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.Node.html">Node</a></li>
+				<li class="active"><a href="class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html">OAuth1ApiServer</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.OAuth2ApiServer.html">OAuth2ApiServer</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html">OAuthApiServer</a></li>
+				<li><a href="class-DevSeb.OAuthPhpLib.Server.ResponseNode.html">ResponseNode</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-DevSeb.OAuthPhpLib.Server.html" title="Summary of DevSeb\OAuthPhpLib\Server"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class OAuth1ApiServer</h1>
+
+
+	<div class="description">
+	<p>Class OAuth1ApiServer.</p>
+
+<p>1-legged, 2-legged and 3-legged OAuth 1.0a API server
+Should be subclassed to implement keys persistence and lookups</p>
+
+<p>Mostly based from the documentation:
+http://oauthbible.com/</p>
+
+<p>1-legged OAuth 1.0a :</p>
+
+<p>Consumer                          Server 1. Request access token |-------------------------------->| 2. Issue an access token |&lt;--------------------------------| 3. Call protected API |-------------------------------->| 4. Send response |&lt;--------------------------------|</p>
+
+<p>2-legged OAuth 1.0a :</p>
+
+<p>Consumer                          Server 1. Request a token |-------------------------------->| 2. Issue a request token |&lt;--------------------------------| 3. Request access token |-------------------------------->| 4. Issue an access token |&lt;--------------------------------| 5. Call protected API |-------------------------------->| 6. Send response |&lt;--------------------------------|</p>
+
+<p>3-legged OAuth 1.0a :
+ Browser                 Consumer                    Server 1. Request a token |------------------------->| 2. Issue a request token |&lt;-------------------------| 3. Redirect to auth page |&lt;--------------------------| 4. Grant access to consumer |----------------------------------------------------->| 5. Confirm user authorization |&lt;-----------------------------------------------------| 6. Redirect to callback |-------------------------->| 7. Request access token |------------------------->| 8. Issue an access token |&lt;-------------------------| 9. Call protected API |------------------------->| 10. Send response |&lt;-------------------------|</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html"><span>DevSeb\OAuthPhpLib\Server\HttpServer</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html"><span>DevSeb\OAuthPhpLib\Server\OAuthApiServer</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>DevSeb\OAuthPhpLib\Server\OAuth1ApiServer</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-DevSeb.html">DevSeb</a>\<a href="namespace-DevSeb.OAuthPhpLib.html">OAuthPhpLib</a>\<a href="namespace-DevSeb.OAuthPhpLib.Server.html">Server</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#13-394" title="Go to source code">Server/OAuth1ApiServer.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#78-88" title="Go to source code">__construct</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.Client.HttpRequest.html">DevSeb\OAuthPhpLib\Client\HttpRequest</a></code> <var>$Request</var></span> )</code>
+
+		<div class="description short">
+			<p>OAuth1ApiServer constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>OAuth1ApiServer constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Request</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#___construct">DevSeb\OAuthPhpLib\Server\OAuthApiServer::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#90-115" title="Go to source code">init</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code><br>
+					Exception
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_init">DevSeb\OAuthPhpLib\Server\OAuthApiServer::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestToken" id="_getRequestToken">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestToken">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#129-155" title="Go to source code">getRequestToken</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAccessToken" id="_getAccessToken">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAccessToken">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#157-185" title="Go to source code">getAccessToken</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkConsumer" id="_checkConsumer">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkConsumer">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#192-215" title="Go to source code">checkConsumer</a>( )</code>
+
+		<div class="description short">
+			<p>Load current consumer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load current consumer.</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkRequestToken" id="_checkRequestToken">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequestToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthRequestToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkRequestToken">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#217-242" title="Go to source code">checkRequestToken</a>( )</code>
+
+		<div class="description short">
+			<p>Load request token.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load request token.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthRequestToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthRequestToken</a></code>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code><br>
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkAccessToken" id="_checkAccessToken">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthAccessToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthAccessToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkAccessToken">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#244-269" title="Go to source code">checkAccessToken</a>( )</code>
+
+		<div class="description short">
+			<p>Load access token.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load access token.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthAccessToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthAccessToken</a></code>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code><br>
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkSignature" id="_checkSignature">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkSignature">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#271-322" title="Go to source code">checkSignature</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthToken</a></code> <var>$Token</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Token</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthException.html">DevSeb\OAuthPhpLib\OAuth\OAuthException</a></code><br>
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkTimestamp" id="_checkTimestamp">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkTimestamp">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#324-343" title="Go to source code">checkTimestamp</a>( <span>integer <var>$timestamp</var></span> )</code>
+
+		<div class="description short">
+			<p>Check timestamp to set lifetime.
+Warning: Both client and server should use same timezone and be in sync (NTP + GMT).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check timestamp to set lifetime.
+Warning: Both client and server should use same timezone and be in sync (NTP + GMT).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$timestamp</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOAuthSignature" id="_getOAuthSignature">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html">DevSeb\OAuthPhpLib\OAuth\OAuthSignature</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOAuthSignature">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#345-365" title="Go to source code">getOAuthSignature</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthToken</a></code> <var>$Token</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Build OAuthSignature in order to verify requests.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Build OAuthSignature in order to verify requests.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Token</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthSignature.html">DevSeb\OAuthPhpLib\OAuth\OAuthSignature</a></code>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientPublicKey" id="_getClientPublicKey">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientPublicKey">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#367-377" title="Go to source code">getClientPublicKey</a>( )</code>
+
+		<div class="description short">
+			<p>This method must be subclassed to return the client public key.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method must be subclassed to return the client public key.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Path to public key used to verify requests
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNonceUsed" id="_isNonceUsed">
+
+		<td class="attributes"><code>
+			abstract protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isNonceUsed">#</a>
+		<code><a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#382-393" title="Go to source code">isNonceUsed</a>( <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthConsumer.html">DevSeb\OAuthPhpLib\OAuth\OAuthConsumer</a></code> <var>$Consumer</var></span>, <span><code><a href="class-DevSeb.OAuthPhpLib.OAuth.OAuthToken.html">DevSeb\OAuthPhpLib\OAuth\OAuthToken</a></code> <var>$Token</var></span>, <span>string <var>$nonce</var></span>, <span>integer <var>$timestamp</var></span> )</code>
+
+		<div class="description short">
+			<p>Check nonce is not already used for this consumer and token.
+This can protected against replay attack.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check nonce is not already used for this consumer and token.
+This can protected against replay attack.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Consumer</var></dt>
+					<dd></dd>
+					<dt><var>$Token</var></dt>
+					<dd></dd>
+					<dt><var>$nonce</var></dt>
+					<dd></dd>
+					<dt><var>$timestamp</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True is nonce has been already used for this consumer and token
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#methods">DevSeb\OAuthPhpLib\Server\OAuthApiServer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_authenticate">authenticate()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_authenticateUser">authenticateUser()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_error">error()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_getConsumer">getConsumer()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_getConsumerFromToken">getConsumerFromToken()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_getToken">getToken()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_newAccessToken">newAccessToken()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_newRequestToken">newRequestToken()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_render">render()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_setVersion">setVersion()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_showLoginPage">showLoginPage()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#_showResponse">showResponse()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#methods">DevSeb\OAuthPhpLib\Server\HttpServer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#_addRoute">addRoute()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#_addRoutes">addRoutes()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#_getRoutes">getRoutes()</a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#_setFormat">setFormat()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="OAUTH_TIMESTAMP_THRESHOLD" id="OAUTH_TIMESTAMP_THRESHOLD">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DevSeb.OAuthPhpLib.Server.OAuth1ApiServer.html#76" title="Go to source code"><b>OAUTH_TIMESTAMP_THRESHOLD</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#OAUTH_TIMESTAMP_THRESHOLD" class="anchor">#</a>
+				<code><span class="php-num">300000</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#constants">DevSeb\OAuthPhpLib\Server\OAuthApiServer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_ACCESS_DENIED"><b>E_OAUTH_ACCESS_DENIED</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_INVALID_CLIENT"><b>E_OAUTH_INVALID_CLIENT</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_INVALID_GRANT"><b>E_OAUTH_INVALID_GRANT</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_INVALID_REQUEST"><b>E_OAUTH_INVALID_REQUEST</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_INVALID_SCOPE"><b>E_OAUTH_INVALID_SCOPE</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_SERVER_ERROR"><b>E_OAUTH_SERVER_ERROR</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_TEMPORARILY_UNAVAILABLE"><b>E_OAUTH_TEMPORARILY_UNAVAILABLE</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_UNAUTHORIZED_CLIENT"><b>E_OAUTH_UNAUTHORIZED_CLIENT</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_UNSUPPORTED_GRANT_TYPE"><b>E_OAUTH_UNSUPPORTED_GRANT_TYPE</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#E_OAUTH_UNSUPPORTED_RESPONSE_TYPE"><b>E_OAUTH_UNSUPPORTED_RESPONSE_TYPE</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#OAUTH_VERSION_1"><b>OAUTH_VERSION_1</b></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#OAUTH_VERSION_2"><b>OAUTH_VERSION_2</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#constants">DevSeb\OAuthPhpLib\Server\HttpServer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#OUTPUT_FORMAT_JSON"><b>OUTPUT_FORMAT_JSON</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#properties">DevSeb\OAuthPhpLib\Server\OAuthApiServer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Server.OAuthApiServer.html#$Consumer"><var>$Consumer</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#properties">DevSeb\OAuthPhpLib\Server\HttpServer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#$Request"><var>$Request</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#$Response"><var>$Response</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#$ResponseNode"><var>$ResponseNode</var></a>, 
+			<a href="class-DevSeb.OAuthPhpLib.Server.HttpServer.html#$format"><var>$format</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
