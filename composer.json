@@ -1,0 +1,24 @@
+{
+  "name": "dev-seb/oauth-php-lib",
+  "description": "Server and client implementation of OAuth 1.0a and 2.0 in PHP",
+  "type": "library",
+  "license": "",
+  "authors": [
+    {
+      "name": "Sébastien Biziou",
+      "email": "sebastien.biziou@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DevSeb\\OAuthPhpLib\\": "src/",
+      "DevSeb\\OAuthPhpLib\\Examples\\": "examples/src/"
+    }
+  },
+  "require-dev": {
+    "apigen/apigen": "^4.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
