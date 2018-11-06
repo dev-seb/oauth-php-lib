@@ -57,14 +57,14 @@ class MyOAuth2ApiServer extends OAuth2ApiServer
     
     // TODO: implement Data Store
 
-    protected function isNonceUsed(OAuthConsumer $Consumer, OAuthToken $Token, $nonce, $timestamp){}
     protected function getConsumer($consumerKey){}
     protected function getConsumerFromToken($tokenKey){}
     protected function getToken(OAuthConsumer $Consumer, $tokenKey, $tokenType){}
     protected function newRequestToken(OAuthConsumer $Consumer, $redirectUri = ''){}
     protected function newAccessToken(OAuthConsumer $Consumer, OAuthRequestToken $RequestToken = null, OAuthRefreshToken $RefreshToken = null){}
+    protected function newRefreshToken(OAuthConsumer $Consumer, OAuthAccessToken $RequestToken = null){}
     protected function showLoginPage(){}
-    protected function authenticateUser(OAuthConsumer $Consumer, $username, $password){}      
+    protected function authenticateUser(OAuthConsumer $Consumer, $username, $password){}    
     
 }
 ?>
